@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login/Login";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Register from "./pages/Login/Register/Register";
 import PrivateRoute from "../src/pages/Login/PrivateRoute/PrivateRoute";
+import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,9 @@ function App() {
           <Switch>
             <PrivateRoute path="/appointment">
               <Appointment />
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
             </PrivateRoute>
             <Route path="/home">
               <Home />
